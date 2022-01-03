@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Prices from "./Screens/Prices"
-import Wallet from "./components/Pays"
+import Wallet from "./Screens/Wallet"
 import Coin from "./context/coins"
 
 ReactDOM.render(
