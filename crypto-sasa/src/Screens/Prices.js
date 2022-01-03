@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 
 const Prices = () => {
+    console.log("I have ran in prices")
     let pricebit;
     let priceeth;
     const originalUrl = 'https://api.cryptonator.com/api/ticker/btc-usd'
@@ -24,6 +25,7 @@ const Prices = () => {
     return (
         <div>
             <p>
+                Show me something please!
                 {priceBit}
             </p>
         </div>

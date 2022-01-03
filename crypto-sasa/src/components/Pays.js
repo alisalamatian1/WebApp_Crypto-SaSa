@@ -3,6 +3,7 @@ import coins from "../context/coins"
 
 
 const Pays = ()=> {
+    console.log("I have ran in Pays")
     const [priceBought, setPriceBought] = useState(0);
     const [quantity, setQuantity] = useState(0);
     const [name, setName] = useState("Bitcoin");
