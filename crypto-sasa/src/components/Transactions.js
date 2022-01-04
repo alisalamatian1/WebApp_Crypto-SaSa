@@ -19,6 +19,9 @@ const Transactions = () => {
         priceBought: priceBought,
       }
     )
+    setName("");
+    setPriceBought("");
+    setQuantity("");
   }, [submitted])
   return (
       <div>
