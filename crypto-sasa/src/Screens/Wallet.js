@@ -12,7 +12,7 @@ const Wallet = () => {
             <Transactions />
             {console.log("I have ran in Wallet in the div")}
             <p>
-                hello
+                
                 {useEffect(() => {
                     console.log("I am inside the useEffect in the Wallet")
                     records.push(coinInfo);

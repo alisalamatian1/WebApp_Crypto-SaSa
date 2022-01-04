@@ -22,6 +22,9 @@ const Transactions = () => {
   }, [submitted])
   return (
       <div>
+        <p>
+          Here is your transactions:
+        </p>
         <input
           type="text"
           value={name}
