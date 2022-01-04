@@ -1,7 +1,7 @@
 import React from "react";
 
 const Coin = React.createContext({
-    name : "",
+    name : "nothing",
     quantity : 0,
     priceBought : 0,
 });
