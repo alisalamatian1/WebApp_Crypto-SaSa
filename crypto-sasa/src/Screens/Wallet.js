@@ -1,18 +1,19 @@
 import React, {useContext} from "react";
 import coins from "../context/coins"
-import Pays from "../components/Pays"
+import Transactions from "../components/Transactions"
 
 const Wallet = () => {
     console.log("I have ran in Wallet")
     const coin = useContext(coins);
     return(
     <div>
-        <Pays/>
+        <Transactions/>
+        {console.log("I have ran in Wallet in the div")}
         <p>
             hello
-            {coin.name}
+            {/* {coin.name}
             {coin.quantity}
-            {coin.priceBought}
+            {coin.priceBought} */}
         </p>
     </div>
     )

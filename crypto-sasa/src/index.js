@@ -8,9 +8,9 @@ import Coin from "./context/coins"
 ReactDOM.render(
   <React.StrictMode>
     <Prices />
-    <Coin.Provider>
+    {/* <Coin.Provider> */}
     <Wallet />
-    </Coin.Provider>
+    {/* </Coin.Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
