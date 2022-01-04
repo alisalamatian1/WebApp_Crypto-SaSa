@@ -1,32 +1,26 @@
-import React from "react";
+import React, { useState, createContext } from "react";
 
-const Coin = React.createContext({
-    name : "nothing",
-    quantity : 0,
-    priceBought : 0,
-});
+export const CoinContext = createContext();
 
-// const Bitcoin = React.createContext({
-//     quantity = 0,
-//     priceBought = 0,
+// export const Coin = createContext({
+//     name : "nothing",
+//     quantity : 0,
+//     priceBought : 0,
 // });
 
-// const Ethereum = React.createContext({
-//     quantity = 0,
-//     priceBought = 0,
-// });
+export const CoinProvider = (props) => {
+    const [coinInfo, setCoinInfo] = useState(
+        {
+            name: "nothing",
+            quantity: 0,
+            priceBought: 0,
+        }
+    )
+    return (
+        <CoinContext.Provider value = {[coinInfo, setCoinInfo]}>
+            {props.children}
+        </CoinContext.Provider>
+    )
+}
 
-// const Stellar = React.createContext({
-//     quantity = 0,
-//     priceBought = 0,
-// });
 
-// const Ripple = React.createContext({
-//     quantity = 0,
-//     priceBought = 0,
-// });
-
-export default Coin
-// export default Ethereum
-// export default Stellar
-// export default Ripple

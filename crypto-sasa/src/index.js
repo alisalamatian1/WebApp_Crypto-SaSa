@@ -3,19 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Prices from "./Screens/Prices"
 import Wallet from "./Screens/Wallet"
-import Coin from "./context/coins"
+import { CoinProvider } from "./context/coins"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Prices />
-    <Coin.Provider 
-    value={{
-      name: "nothing",
-      quantity: 0,
-      priceBought: 0,
-    }}>
+    <CoinProvider>
+      <Prices />
       <Wallet />
-    </Coin.Provider>
+    </CoinProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

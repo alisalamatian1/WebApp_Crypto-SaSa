@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import coins from "../context/coins"
 import Transactions from "../components/Transactions"
+import { CoinContext } from "../context/coins"
 
 const Wallet = () => {
     console.log("I have ran in Wallet")
-    console.log(coins)
-    //const coin = useContext(coins);
+    const [coinInfo, setCoinInfo] = useContext(CoinContext);
+    const [records, setRecords] = useState([]);
     return (
         <div>
             <Transactions />
@@ -14,22 +15,35 @@ const Wallet = () => {
                 hello
                 {useEffect(() => {
                     console.log("I am inside the useEffect in the Wallet")
-                    console.log(coins)
+                    records.push(coinInfo);
+                    console.log(coinInfo);
                     return (
-                        <div>
-                            <p>
-                                {coins.name}
-                                {coins.quantity}
-                                {coins.priceBought}
-                            </p>
-                        </div>
-                    )
-                }, [coins.name, coins.priceBought, coins.quantity])}
-                {/* {coins.name}
-                {coins.quantity}
-                {coins.priceBought} */}
 
-            </p>
+                        <p>
+                            does not run
+                        </p>
+
+                    )
+                }, [coinInfo.name, coinInfo.priceBought, coinInfo.quantity])}
+                {/* {coinInfo.name}
+                {coinInfo.quantity}
+                {coinInfo.priceBought} */}
+
+                {
+                    records.map((record) => {
+                        // console.log("inside the map inside the wallet and records")
+                        // console.log(record)
+                        return(
+                        <p>
+                            {record.name}
+                            {record.quantity}
+                            {record.priceBought}
+                       </p>
+                       
+                        )
+                        })
+                }
+          </p>
         </div>
     )
 }
