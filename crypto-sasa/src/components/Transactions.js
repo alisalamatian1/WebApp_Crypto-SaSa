@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import coins from "../context/coins"
-import {CoinContext} from "../context/coins"
+
 
 
 const Transactions = () => {
@@ -9,20 +8,8 @@ const Transactions = () => {
   const [quantity, setQuantity] = useState(0);
   const [name, setName] = useState("");
   const [submitted, setSubmit] = useState(false);
-  const [coinInfo, setCoinInfo] = useContext(CoinContext);
-  useEffect(() => {
-    console.log("I am inside the useEffect in the Wallet")   
-    setCoinInfo(
-      {
-        name: name,
-        quantity: quantity,
-        priceBought: priceBought,
-      }
-    )
-    setName("");
-    setPriceBought("");
-    setQuantity("");
-  }, [submitted])
+  
+  
   return (
       <div>
         <p>
